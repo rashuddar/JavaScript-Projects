@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #cccfd2;
+}
+
+.container {
+    width: 400px;
+    padding: 25px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000000;
+    color: #FFF;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.container p {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.container input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #83fd00;
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 50px;
+}
+
+.container button {
+    width: 100%;
+    height: 50px;
+    background: #83fd00;
+    color: black;
+    border: 0;
+    outline: 0;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin: 20px 0;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.imgBox{
+    width: 200px;
+    border-radius: 15px;
+    max-height: 0;
+    /*initially the box height will be 0*/
+    overflow: hidden;
+    transition: max-height 1s;
+    /*to increase the size of the box qrgenerater*/
+}
+
+.imgBox img {
+    width: 100%;
+    padding: 10px;
+}
+
+.imgBox.show-img {
+    /*after we enter the name and click on generate QR*/
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+}
+
+.error {
+    animation: shake 0.1s linear 10;
+}
+
+@keyframes shake{
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-2px); /*goes to left*/
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(2px); /*goes to right*/
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
